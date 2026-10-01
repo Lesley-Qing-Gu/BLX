@@ -79,6 +79,17 @@ const wallSection=document.querySelector('.wall-scroll');
 if(wallSection){
  const stage=wallSection.querySelector('.wall-stage');
  const captions=[...wallSection.querySelectorAll('.wall-caption')];
+ captions.forEach(caption=>{
+  const heading=caption.querySelector('h3');
+  const text=heading.lastChild;
+  if(text.nodeType===Node.TEXT_NODE&&text.textContent.endsWith('.')){
+   text.textContent=text.textContent.slice(0,-1);
+   const period=document.createElement('span');
+   period.className='rule-period';
+   period.textContent='.';
+   heading.append(period);
+  }
+ });
  const pictures=[...wallSection.querySelectorAll('.wall-photo')];
  const controls=[...wallSection.querySelectorAll('button[data-wall]')];
  let activeWall=-1,wallScheduled=false;

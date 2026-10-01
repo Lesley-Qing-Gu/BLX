@@ -346,3 +346,5 @@ h1 .title-dot,h2 .title-dot,.reception-block h3 .title-dot{display:inline-block;
 
 .wall-copy h2{margin-top:35px}
 @media(max-width:700px){.wall-copy h2{margin-top:18px}}
+.wall-caption h3 .rule-period{color:var(--red)}
+.grade-tags img[src$="grade-1.webp"]+figcaption,.grade-tags img[src$="grade-9.webp"]+figcaption{display:none}
